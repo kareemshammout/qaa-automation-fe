@@ -1,6 +1,6 @@
 # qaa-automation-fe
 
-#for run the test please using npm with the below command link
+# for run the test please using npm with the below command link
  npm run cy:run_test
 
 # for report results 
