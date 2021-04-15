@@ -1,5 +1,29 @@
 {
   
- "name" : "seera-travle" 
+ "name": "seera-travle",
+ "version": "0.1.0",
+ "private": true,
+ "directories": {
+  "test": "./cypress/integration"
+ },
+ "scripts": {
+  "cy:open": "cypress open",
+  "cy:version": "cypress version",
+  "cy:cache_list": "cypress cache list",
+  "cy:run_test": "cypress run --config-file \"cypress.json\" --browser chrome --headless --env allure=true"
+ },
+
+ "devDependencies": {
+ "cypress": "^7.1.0"
+ },
+ "dependencies": {
+ "@shelex/cypress-allure-plugin": "^2.5.0",
+ "cypress-cucumber-preprocessor": "^4.0.3",
+ "cypress-wait-until": "^1.7.1"
+ },
   
+ "cypress-cucumber-preprocessor": {
+ "step_definitions": "cypress/support/stepdefs"
+  
+ }
 }

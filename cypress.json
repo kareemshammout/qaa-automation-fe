@@ -1,0 +1,13 @@
+{
+  "baseUrl": "https://www.almosafer.com",
+  "pageLoadTimeout": 60000,
+  "viewportWidth": 1200,
+  "viewportHeight": 660,
+  "defaultCommandTimeout": 6000,
+  "testFiles":  "**/*.feature",
+  "screenshotOnRunFailure": true,
+  "env": {
+    "allure": true,
+    "allureResultsPath": "cypress/integration/results/allure"
+  }
+}
