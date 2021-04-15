@@ -33,7 +33,7 @@ Feature: First Test
 
     Examples:
       | origin |destination|
-      | DsXB |   JED      |
+      | DXB |   JED      |
       | AUH |   CAI      |
       | SHJ |   DEL      |
       | JED |   KHI      |
