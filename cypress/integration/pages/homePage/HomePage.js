@@ -3,7 +3,10 @@
 class HomePage {
 
     selectEnglishLanguage(){
-        cy.visit('/')
+        cy.visit('/ar/?ncr=1')
+        Cypress.on('uncaught:exception', () => {
+            return false
+        })
         cy.get('[data-testid="Header__LanguageSwitch"]').then((lang =>{
             cy.log("current language is: " + lang.text().toString())
             if (lang.text().toString() == "English"){
@@ -17,7 +20,7 @@ class HomePage {
         cy.get('[href="https://wa.me/966554400000"]').contains('+966554400000')
         cy.get('[data-testid="Header__RetrieveMyBooking"]').contains('Retrieve my booking')
         cy.get('[data-testid="Header__LanguageSwitch"]').contains('العربية')
-        cy.get('[data-testid="Header__CurrencySelector"]').contains('SAR')
+        cy.get('[data-testid="Header__CurrencySelector"]').contains('AED')
     }
 
     tabsVerifications(){
@@ -26,9 +29,10 @@ class HomePage {
     }
 
     serviceVerifications(){
-        cy.get('[href="https://www.almosafer.com/en/page/car-rental?no-cache=1&&ncr=1"]').contains('Car rental')
-        cy.get('[href="/en/packages"]').contains('Domestic packages')
-        cy.get('h4').contains('Cruise packages')
+        cy.get('h4').contains('Car rental')
+        cy.get('h4').contains('Transfers')
+        cy.get('h4').contains('Activities')
+        cy.get('h4').contains('More services')
     }
 
     selectFlightTab(){
